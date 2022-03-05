@@ -9,6 +9,8 @@ import { ProjectComponent } from './modules/project/project.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { LoginComponent } from './modules/login/login.component';
+import { OngsRegistrationComponent } from './modules/ongs-registration/ongs-registration.component';
+import { CaseRegistrationComponent } from './modules/case-registration/case-registration.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { LoginComponent } from './modules/login/login.component';
     ListComponent,
     CaseComponent,
     ProjectComponent,
-    LoginComponent
+    LoginComponent,
+    OngsRegistrationComponent,
+    CaseRegistrationComponent
   ],
   imports: [
     BrowserModule,
