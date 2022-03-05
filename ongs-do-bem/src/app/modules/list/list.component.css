@@ -1,0 +1,80 @@
+.content {
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0 30px 0;
+}
+
+.button-area {
+    display: flex;
+}
+
+.act-button {
+    background-color: #206DE0;
+    height: 40px;
+    width: 120px;
+
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+
+    cursor: pointer;
+}
+
+.logout-button {
+    background-color: transparent;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #DCDCE5;
+    border-radius: 8px;
+
+    margin-left: 15px;
+    color: #206DE0;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    color: #DD3126;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.title {
+    margin-top: 30px;
+    font-size: 2rem;
+}
+
+.card-content {
+    display: flex; 
+    justify-content: space-between; 
+    height: 100%; 
+    flex-wrap: wrap; 
+    align-items: center; 
+    align-content: flex-start;
+    margin-bottom: 30px;
+}
+
+.button-navigation {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 50px;
+}
+
+.button-navigation button {
+    background-color: #206DE0;
+    border: none;
+    color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
