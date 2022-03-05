@@ -1,0 +1,28 @@
+.fields {
+    width: 30%;
+}
+
+.fields textarea {
+    height: 70px;
+    margin-bottom: 10px;
+    border: 1.5px solid #DCDCE5;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 10px;
+    resize: none;
+}
+
+.button-cancel {
+    width: 30%;
+    margin-right: 20px;
+    height: 40px;
+    cursor: pointer;
+
+    background-color: transparent;
+    border: 1.5px solid #DCDCE5;
+    border-radius: 8px;
+}
+
+.button-register {
+    width: calc(70% - 20px);
+}
