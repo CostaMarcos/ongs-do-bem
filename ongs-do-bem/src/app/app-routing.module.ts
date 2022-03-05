@@ -1,3 +1,4 @@
+import { OngsRegistrationComponent } from './modules/ongs-registration/ongs-registration.component';
 import { LoginComponent } from './modules/login/login.component';
 import { ListComponent } from './modules/list/list.component';
 import { NgModule } from '@angular/core';
@@ -13,9 +14,13 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
+    path: 'cadastro',
+    component: OngsRegistrationComponent
+  },
+  {
     path: '**',
     component: ListComponent
-  }
+  },
 ];
 
 @NgModule({
