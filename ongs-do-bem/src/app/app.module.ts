@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { LoginComponent } from './modules/login/login.component';
 import { OngsRegistrationComponent } from './modules/ongs-registration/ongs-registration.component';
 import { CaseRegistrationComponent } from './modules/case-registration/case-registration.component';
+import { HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CaseRegistrationComponent } from './modules/case-registration/case-regi
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    HttpClient
   ],
   providers: [],
   bootstrap: [AppComponent]

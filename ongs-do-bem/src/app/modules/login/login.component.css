@@ -27,7 +27,10 @@
     border-radius: 8px;
     height: 50px;
     margin-bottom: 20px;
-    width: 128%;
+    width: calc(128% - 10px);
+    outline: none;
+
+    padding-left: 10px;
 }
 
 .login-elements button {

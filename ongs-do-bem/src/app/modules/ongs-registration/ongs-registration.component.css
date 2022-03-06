@@ -33,6 +33,7 @@
     border-radius: 8px;
 
     padding: 10px;
+    outline: none;
 }
 
 .main-element .city {
