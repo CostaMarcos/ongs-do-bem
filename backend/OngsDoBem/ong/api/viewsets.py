@@ -53,4 +53,4 @@ class OngViewSet(viewsets.ModelViewSet):
             return Response(status=status.HTTP_401_UNAUTHORIZED);
         else:
             myhash = cryptocode.encrypt(data['code'], cypher)
-            return Response({'Authentication': myhash})
+            return Response({'Authentication': myhash, 'userId': query.first().id})

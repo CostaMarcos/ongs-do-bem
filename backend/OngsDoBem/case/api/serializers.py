@@ -4,5 +4,5 @@ from case import models
 class CaseSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Case
-        fields = ['id', 'title', 'description', 'value', 'ong_id']
+        fields = '__all__'
         depth = 1
