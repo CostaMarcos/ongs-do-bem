@@ -1,0 +1,27 @@
+<div class="content">
+    <div class="header">
+        <div>
+            <h2>CASO:</h2>
+            <p>{{ data.title }}</p>
+        </div>
+        <div>
+            <h2>ONG:</h2>
+            <p>{{ data.ong_id.name }}</p>
+        </div>
+    </div>
+    <div class="body">
+        <h2>DESCRIÇÃO:</h2>
+        <p>{{ data.description }}</p>
+    </div>
+    <div>
+        <h2>VALOR:</h2>
+        <p>R${{ data.value }}</p>
+    </div>
+
+    <h2>Salve o dia!</h2>
+    <h2>Seja o herói desse caso.</h2>
+    <div class="buttons">
+        <button><a href="https://api.whatsapp.com/send?phone={{data.ong_id.number}}" target="_blank"> Whatsapp</a></button>
+        <button>E-mail</button>
+    </div>
+</div>

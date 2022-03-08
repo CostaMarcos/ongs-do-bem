@@ -10,6 +10,8 @@
 .main-element {
     width: 60%;
     height: 50%;
+    min-width: 1000px;
+    min-height: 450px;
 
     background: #F0F0F5;
     box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.1);

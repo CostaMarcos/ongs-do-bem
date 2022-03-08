@@ -3,18 +3,21 @@
     <div class="header">
         <img src="../../../assets/logo.svg">
         <div class="button-area">
-            <button class="act-button">Fazer login</button>
-            <button class="logout-button">
+            <button *ngIf="!userLogged" class="act-button" routerLink="/login">Fazer login</button>
+            <button *ngIf="userLogged" class="act-button-create" routerLink="/novo-caso">Cadastrar novo caso</button>
+            <button *ngIf="userLogged" class="logout-button" routerLink="/login" (click)="logout()">
                 <mat-icon>power_settings_new</mat-icon>
             </button>
         </div>
     </div>
 
-    <h2 class="title">Lista de projetos</h2>
+    <h2 *ngIf="!userLogged" class="title">Lista de projetos</h2>
+    <h2 *ngIf="userLogged" class="title">Seus casos cadastrados</h2>
     <a href="#header" class="button-navigation">
         <button><mat-icon>arrow_circle_up</mat-icon></button>
     </a>
     <div class="card-content">
-        <app-project></app-project>
+        <app-case *ngIf="!userLogged" [cases]="cases"></app-case>
+        <app-project *ngIf="userLogged" [cases]="cases"></app-project>
     </div>
 </div>

@@ -2,9 +2,10 @@
     <div class="login-elements">
         <img src=".././../../assets/logo.svg">
         <h2>Faça seu login</h2>
-        <input type="text" placeholder="Seu ID">
-        <button>Entrar</button>
-        <a href="/cadastro"><mat-icon>login</mat-icon> Não tenho cadastro</a>
+        <input [class.input-error]="loginError == true" type="text" placeholder="Seu ID" maxlength="8" #ongId>
+        <a class="no-login" routerLink="/">Entrar sem login</a>
+        <button (click)="logon(ongId.value)">Entrar</button>
+        <a routerLink="/cadastro"><mat-icon>login</mat-icon> Fazer cadastro</a>
     </div>
     <div>
         <img src="../../../assets/people.svg">

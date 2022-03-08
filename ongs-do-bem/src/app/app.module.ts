@@ -11,7 +11,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { LoginComponent } from './modules/login/login.component';
 import { OngsRegistrationComponent } from './modules/ongs-registration/ongs-registration.component';
 import { CaseRegistrationComponent } from './modules/case-registration/case-registration.component';
-import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { MatInputModule } from '@angular/material/input';
+import { MatDialogModule } from '@angular/material/dialog';
+import { WellcomeDialogComponent } from './modules/wellcome-dialog/wellcome-dialog.component';
+import { DetailsDialogComponent } from './modules/details-dialog/details-dialog.component';
 
 @NgModule({
   declarations: [
@@ -21,14 +25,19 @@ import { HttpClient } from '@angular/common/http';
     ProjectComponent,
     LoginComponent,
     OngsRegistrationComponent,
-    CaseRegistrationComponent
+    CaseRegistrationComponent,
+    WellcomeDialogComponent,
+    DetailsDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
-    HttpClient
+    HttpClientModule,
+    MatInputModule,
+    MatIconModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

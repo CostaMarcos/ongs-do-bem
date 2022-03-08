@@ -1,13 +1,17 @@
-<div class="case">
-    <div class="content">
-        <h3>Caso:</h3><p>Cadelinha atropelada</p>
-        <h3>ONG:</h3><p>APAD</p>
-        <h3>VALOR:</h3><p>R$ 120,00</p>
-    </div>
-    <div class="details">
-        <button>
-            Veja mais detalhes 
-            <mat-icon>trending_flat</mat-icon>
-        </button>
+<div class="list-cases" >
+    <div *ngFor="let case of cases">
+        <div class="case">
+            <div class="content">
+                <h3>Caso:</h3><p>{{ case.title }}</p>
+                <h3>ONG:</h3><p>{{ case.ong_id.name }}</p>
+                <h3>VALOR:</h3><p>R${{ case.value }}</p>
+            </div>
+            <div class="details">
+                <button (click)="viewDetails(case)">
+                    Veja mais detalhes 
+                    <mat-icon>trending_flat</mat-icon>
+                </button>
+            </div>
+        </div>
     </div>
 </div>

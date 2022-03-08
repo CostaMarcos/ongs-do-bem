@@ -1,0 +1,29 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+}
+
+img {
+    width: 150px;
+}
+
+h1 {
+    color: red;
+}
+
+button {
+    color: #fff;
+    background-color: #206DE0;
+    border-radius: 8px;
+    border: none;
+
+    width: 120px;
+    height: 40px;
+}
+
+p {
+    text-align: center;
+    font-size: medium;
+}

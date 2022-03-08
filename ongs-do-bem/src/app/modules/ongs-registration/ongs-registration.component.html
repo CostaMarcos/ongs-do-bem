@@ -7,17 +7,20 @@
                 pessoas a encontrarem os casos da sua ONG.
             </p>
 
-            <a href="/login"><mat-icon>arrow_back_ios</mat-icon>Voltar para o login</a>
+            <a routerLink="/login"><mat-icon>arrow_back_ios</mat-icon>Voltar para o login</a>
         </div>
         <div class="fields">
-            <input type="text" placeholder="Nome da ONG">
-            <input type="text" placeholder="E-mail">
-            <input type="number" placeholder="Whatsapp">
+            <input type="text" placeholder="Nome da ONG" #name>
+            <input type="email" placeholder="E-mail" #email>
+            <input type="number" placeholder="Whatsapp" #phone>
             <div>
-                <input class="city" type="text" placeholder="Cidade">
-                <input class="uf" type="text" placeholder="UF" maxlength="2">
+                <input class="city" type="text" placeholder="Cidade" #city>
+                <input class="uf" type="text" placeholder="UF" maxlength="2" #region>
             </div>
-            <button class="button-register">Cadastrar</button>
+            <button
+                class="button-register" 
+                (click)="create(name.value, email.value, phone.value, city.value, region.value)">Cadastrar
+            </button>
         </div>
     </div>
 </div>

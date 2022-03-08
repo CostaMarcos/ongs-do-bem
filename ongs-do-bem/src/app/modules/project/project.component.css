@@ -6,6 +6,7 @@
     margin-top: 30px;
     padding-top: 20px;
     border-radius: 8px;
+    margin-right: 1vw;
 }
 
 .project .content {
@@ -30,7 +31,7 @@
 .project-header {
     width: 100%;
     display: flex;
-    align-content: space-between;
+    justify-content: flex-end;
 }
 
 .project-header p {
@@ -42,4 +43,14 @@
     border: none;
     cursor: pointer;
     color: #DD3126;
+}
+
+.list-projects {
+    display: flex; 
+    justify-content: space-between; 
+    height: 100%; 
+    flex-wrap: wrap; 
+    align-items: center; 
+    align-content: flex-start;
+    margin-bottom: 30px;
 }

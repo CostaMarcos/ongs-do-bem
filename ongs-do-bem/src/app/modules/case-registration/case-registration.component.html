@@ -5,15 +5,15 @@
             <h2>Cadastrar novo caso</h2>
             <p>Descreva o caso detalhadamente para encontrar um herói para resolver isso.</p>
 
-            <a href="/"><mat-icon>arrow_back_ios</mat-icon>Voltar para home</a>
+            <a routerLink="/"><mat-icon>arrow_back_ios</mat-icon>Voltar para home</a>
         </div>
         <div class="fields">
-            <input type="text" placeholder="Título do caso">
-            <textarea placeholder="Descrição"></textarea>
-            <input type="text" placeholder="Valor em reais">
+            <input type="text" placeholder="Título do caso" #title>
+            <textarea placeholder="Descrição" #description></textarea>
+            <input type="number" placeholder="Valor em reais" #value>
             <div class="button-area">
-                <button class="button-cancel">Cancelar</button>
-                <button class="button-register">Cadastrar</button>
+                <button class="button-cancel" routerLink="/">Cancelar</button>
+                <button class="button-register" (click)="registerCase(title.value, description.value, value.value)">Cadastrar</button>
             </div>
         </div>
     </div>

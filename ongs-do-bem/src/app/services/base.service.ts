@@ -1,4 +1,4 @@
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { environment } from './../../environments/environment.prod';
 import { catchError, map } from 'rxjs/operators';
@@ -8,7 +8,7 @@ export class BaseService<T> {
   protected api: string = environment.api;
   protected fullUrl: string;
   protected parameters: HttpParams;
-  protected headers = new Headers({
+  protected headers = new HttpHeaders({
     'Content-Type': 'application/json',
     'Content-Language': 'pt-br',
     'Accept-Language': 'pt-br',
@@ -23,6 +23,10 @@ export class BaseService<T> {
     return localStorage.getItem('authentication') || "";
   }
 
+  public clearParameters(): void {
+    this.parameters = new HttpParams();
+  }
+
   public addParameter(key: string, value: string): void {
     this.parameters = this.parameters.append(key, value);
   }
@@ -31,7 +35,15 @@ export class BaseService<T> {
     localStorage.setItem('authentication', token);
   }
 
+  public removeToken(): void {
+    localStorage.removeItem('authentication');
+    localStorage.removeItem('userId');
+  }
+
   protected addOptions(parameters?: HttpParams): any {
+
+    this.headers = this.headers.set('Authorization', this.getToken())
+
     if(parameters !== null && parameters !== undefined) {
       return {
         responseType: 'json',
@@ -54,5 +66,18 @@ export class BaseService<T> {
       map((response: Object) => response as T[]),
       catchError(ex => throwError(ex))
     );
+  }
+
+  public removeById(id: number): any {
+    return this.http.delete(
+      this.fullUrl.concat(String(id) + '/'), 
+      this.addOptions(this.parameters)).pipe(
+        map(_ => {
+        }),
+        catchError(ex => throwError(ex)));
+  }
+
+  public create(data: T): any {
+    return this.http.post(this.fullUrl, data, this.addOptions(this.parameters));
   }
 }

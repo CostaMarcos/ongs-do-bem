@@ -1,4 +1,7 @@
+import { Router } from '@angular/router';
+import { CaseService } from './../../services/case.service';
 import { Component, OnInit } from '@angular/core';
+import Case from 'src/app/models/case.model';
 
 @Component({
   selector: 'app-case-registration',
@@ -8,9 +11,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CaseRegistrationComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: CaseService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
+
+  public registerCase(title: string, description: string, value: string) {
+    this.service.registerCase(title, description, value).subscribe(() => {
+      this.router.navigateByUrl('/');
+    });
+  }
 }

@@ -1,0 +1,43 @@
+.content {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.body {
+    min-height: 150px;
+}
+
+.buttons {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    background-color: #206DE0;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    width: 150px;
+    height: 50px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+h2 {
+    margin: 0;
+    font-size: 17px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}

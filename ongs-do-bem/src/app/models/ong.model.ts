@@ -4,5 +4,6 @@ export default interface Ong {
     email: string,
     number: string,
     city: string,
-    region: string
+    region: string,
+    code: string
 }

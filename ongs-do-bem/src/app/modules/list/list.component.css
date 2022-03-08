@@ -28,6 +28,18 @@
     cursor: pointer;
 }
 
+.act-button-create {
+    background-color: #206DE0;
+    height: 40px;
+    width: 180px;
+
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+
+    cursor: pointer;
+}
+
 .logout-button {
     background-color: transparent;
     height: 40px;
